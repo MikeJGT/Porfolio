@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Arapey&family=Gloock&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// font-family: 'Arapey', serif;
+// font-family: 'Gloock', serif;
+
+.about {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: wheat;
+    font-family: 'Gloock', serif;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+.descripcion {
+    width: 40%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    font-family: 'Arapey', serif;
+    font-size: 1.2rem;
+}
+
+ul {
+    margin: 20px;
+    text-decoration: none;
+}

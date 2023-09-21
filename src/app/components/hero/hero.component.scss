@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Satisfy&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: white;
+    font-family: 'Monoton', cursive;
+    font-size: 3rem;
+    // font-size: ;
+}
+
+h2 {
+    color: wheat;
+    font-family: 'Satisfy', cursive;
+    font-size: 3rem;
+}
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    flex-direction: column;
+}
