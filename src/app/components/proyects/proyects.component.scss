@@ -7,21 +7,17 @@
     box-sizing: border-box;
 }
 
-// font-family: 'Arapey', serif;
-// font-family: 'Gloock', serif;
-
-// .proyects {
-//     width: 100vw;
-//     height: 100vh;
-//     display: flex;
-//     flex-direction: column;
-
-// }
-
 h2 {
     margin: 50px 0px;
     font-size: 3rem;
     color: wheat;
+}
+
+
+h3 {
+    font-size: 1.2rem;
+    font-family: 'Gloock', serif;
+    margin-top: 20px;
 }
 
 .container {
@@ -79,14 +75,6 @@ a {
     color: inherit;
 }
 
-.proyects {
-    width: 100%;
-    display: flex;
-    background-color: rgb(190, 216, 216);
-    border-radius: 5px;
-    overflow: hidden;
-}
-
 section {
     width: 100%;
     height: 90vh;
@@ -95,45 +83,40 @@ section {
     align-items: center;
 }
 
-.proyects .g {
-    width: 50%;
-    height: 400px;
-
-}
-
-.proyects .descripcion {
-    width: 50%;
-    height: auto;
-    font-family: 'Arapey', serif;
-    background-color: rgb(245, 222, 179);
-    padding: 20px;
+.proyects {
+    width: 100%;
     display: flex;
-    align-items: center;
-    // justify-content: center;
-    flex-direction: column;
+    background-color: rgb(190, 216, 216);
+    border-radius: 5px;
+    overflow: hidden;
+
+    & .g {
+        width: 50%;
+        height: 400px;
+
+    }
+
+    & .descripcion {
+        width: 50%;
+        height: auto;
+        font-family: 'Arapey', serif;
+        background-color: rgb(245, 222, 179);
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        flex-direction: column;
+
+        & .texto {
+            width: 80%;
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
 
 }
-
-.proyects .texto {
-    width: 80%;
-    height: 80%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-}
-
-h3 {
-    font-size: 1.2rem;
-    font-family: 'Gloock', serif;
-    margin-top: 20px;
-}
-
-
-
-
-
-
 
 @media (max-width:768px) {
 
@@ -155,23 +138,26 @@ h3 {
         width: 100%;
         height: 100%;
         flex-wrap: wrap;
+
+        & .g {
+            width: 100%;
+            height: 50%;
+        }
+
+        & .descripcion {
+            width: 100%;
+            height: 50%;
+
+            & .texto {
+                max-height: calc(100% - 1.2rem);
+                width: 100%;
+            }
+        }
     }
 
-    .proyects .g {
-        width: 100%;
-        height: 50%;
-    }
-
-    .proyects .descripcion {
-        width: 100%;
-        height: 50%;
-    }
 
 
-    .proyects .descripcion .texto {
-        max-height: calc(100% - 1.2rem);
-        width: 100%;
-    }
+
 
 
     .rev {

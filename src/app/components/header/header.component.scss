@@ -27,18 +27,20 @@ h3 {
     font-family: 'Satisfy', cursive;
     color: rgb(255, 255, 255, 0.8);
     cursor: pointer;
-}
 
-h3:hover {
-    color: wheat;
+    &:hover {
+        color: wheat;
+    }
+
 }
 
 @media(max-width:480px) {
     .container {
         opacity: 0;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 
-    .container:hover {
-        opacity: 1;
-    }
 }
