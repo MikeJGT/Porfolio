@@ -20,7 +20,7 @@
 }
 
 .container {
-    width: 70%;
+    width: 60%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -53,8 +53,12 @@ ul {
     text-decoration: none;
 }
 
-@media(max-width:400px) {
+@media(max-width:480px) {
     .about {
         height: auto;
+    }
+
+    .container {
+        width: 80%;
     }
 }
