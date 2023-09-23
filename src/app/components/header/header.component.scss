@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Satisfy&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 75px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    padding: 0px 40px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h3 {
+    font-family: 'Satisfy', cursive;
+    color: rgb(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+h3:hover {
+    color: wheat;
+}
+
+@media(max-width:480px) {
+    .container {
+        opacity: 0;
+    }
+
+    .container:hover {
+        opacity: 1;
+    }
+}

@@ -11,7 +11,7 @@
 
 .about {
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,11 +20,17 @@
 }
 
 .container {
-    width: 100%;
+    width: 70%;
+    height: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
+
+}
+
+.title {
+    margin: 50px 0;
 }
 
 h2 {
@@ -32,17 +38,23 @@ h2 {
 }
 
 .descripcion {
-    width: 40%;
+    width: 100%;
     height: auto;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 100px;
     font-family: 'Arapey', serif;
     font-size: 1.2rem;
+    // text-align: justify;
+    // text-justify: inter-word;
+    text-indent: 1.5rem;
+    margin-bottom: 50px;
 }
 
 ul {
     margin: 20px;
     text-decoration: none;
+}
+
+@media(max-width:400px) {
+    .about {
+        height: auto;
+    }
 }

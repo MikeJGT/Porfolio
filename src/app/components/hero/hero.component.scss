@@ -26,5 +26,14 @@ h2 {
     justify-content: center;
     align-items: center;
     background-color: black;
+
+}
+
+.wrapper {
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
 }

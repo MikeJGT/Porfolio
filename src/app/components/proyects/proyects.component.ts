@@ -18,4 +18,15 @@ export class ProyectsComponent {
   //   this.config.showNavigationArrows = false;
   //   this.config.showNavigationIndicators = false;
   // }
+
+  ngOnInit() {
+    this.display();
+  }
+
+  display() {
+    let res = ((window.innerHeight) >= window.scrollY) ? false : true;
+    console.log('RESUL', res);
+    return res;
+
+  }
 }
