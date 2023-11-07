@@ -1,0 +1,25 @@
+<app-hero>
+    <div class="proyect-hero">
+        <carrousel [images]="this.proyect.image.carrousel"></carrousel>
+        <div class="decorator izq">
+            <img src="../../../assets/lineDecorator.png" alt="">
+        </div>
+        <div class="decorator der">
+            <img src="../../../assets/lineDecorator.png" alt="">
+        </div>
+        <div class="single">
+            <img src="../../../assets/decoradorUno.png" alt="">
+        </div>
+    </div>
+</app-hero>
+<div class="wrapper">
+    <div class="container">
+        <h2>{{this.proyect.name}}</h2>
+        <br><br>
+        <div>
+            <p [innerHTML]="this.proyect.description">
+            </p>
+        </div>
+        <a [href]="proyect.link">link</a>
+    </div>
+</div>

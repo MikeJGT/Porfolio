@@ -1,0 +1,28 @@
+@import './importedStyles';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    @include font ($color: $textcolor-tertiary, $font-size: $font-size-large, $font-family: $fontfamily-titles, $font-weight: 400, $text-align: center);
+}
+
+h2 {
+    @include font ($color: $textcolor-base, $font-size: $font-size-large, $font-family: $fontfamily-subtitles, $font-weight: 700, $text-align: center);
+}
+
+h3 {
+    @include font ($color: $textcolor-base, $font-size: $font-size-large, $font-family: $fontfamily-subtitles, $text-align: center);
+}
+
+p {
+    @include font ($color: $textcolor-base, $font-size: $font-size-text, $font-family: $fontfamily-text);
+}
+
+body {
+    // min-width: 300px;
+    background-color: $backgroundpageColor;
+}

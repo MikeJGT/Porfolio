@@ -1,0 +1,22 @@
+<app-hero>
+    <div class="hero_wrapper">
+        <h2>My proyects &nbsp;
+            <div class="hideDots">
+                <span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>&nbsp;
+            </div>
+        </h2>
+    </div>
+</app-hero>
+<div class="wrapper">
+    <div class="container">
+        <section>
+            <article *ngFor="let proyect of proyects" class="proyect"
+                [ngStyle]="{'background-image':'url('+proyect.image.front+')'}" [routerLink]="['/the-proyect']"
+                (click)="goToProyect(proyect.id)">
+                <div>
+                    <h3>{{proyect.name}}</h3>
+                </div>
+            </article>
+        </section>
+    </div>
+</div>

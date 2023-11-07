@@ -1,0 +1,46 @@
+<app-hero>
+    <div class="contact_wrapper">
+        <h2>Contact me&nbsp;</h2>
+    </div>
+</app-hero>
+<div class="wrapper">
+    <div class="floralBackground izq">
+        <img src="../../../assets/floralBackground.png" alt="_blank">
+    </div>
+    <div class="floralBackground der">
+        <img src="../../../assets/floralBackground.png" alt="_blank">
+    </div>
+    <div class="bgColorA">
+        <div class="container form-card" data-aos="zoom-in" data-aos-duration="3000">
+            <h3>Hi there!</h3>
+            <form [formGroup]="this.formulary">
+                <div>
+                    <label>Name</label>
+                    <input type="text" formControlName="name" placeholder="Type Your Name"
+                        [ngStyle]="(this.formulary.controls['name'].touched && !this.formulary.controls['name'].valid)?{'border-bottom':'1px solid red'}:{'border-bottom':'1px solid black'}">
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="email" formControlName="email" placeholder="Type Your Email"
+                        [ngStyle]="(this.formulary.controls['email'].touched && !this.formulary.controls['email'].valid)?{'border-bottom':'1px solid red'}:{'border-bottom':'1px solid black'}">
+                    <div *ngIf="this.formulary.controls['email'].touched && !this.formulary.controls['email'].valid">
+                        <p [ngStyle]="{'color':'red','font-size':'1rem'}">A valid email is required.</p>
+                    </div>
+                </div>
+                <div>
+                    <label>Subject</label>
+                    <input type="text" formControlName="concept" placeholder="I Want To Hire You"
+                        [ngStyle]="(this.formulary.controls['concept'].touched && !this.formulary.controls['concept'].valid)?{'border-bottom':'1px solid red'}:{'border-bottom':'1px solid black'}">
+                </div>
+                <div>
+                    <label>Message</label>
+                    <textarea formControlName="message" placeholder="The Message"
+                        [ngStyle]="(this.formulary.controls['message'].touched && !this.formulary.controls['message'].valid)?{'border-bottom':'1px solid red'}:{'border-bottom':'1px solid black'}"></textarea>
+                </div>
+                <div>
+                    <button (click)="onSubmit()">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

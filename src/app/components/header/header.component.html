@@ -1,9 +1,19 @@
-<div class="container">
-
-    <h3>Porfolio</h3>
-
-    <a href="mailto:mikecode808@gmail.com">
-        <h3>Contacto</h3>
+<div id="wrapper" class="wrapper">
+    <a routerLink="/">
+        <h3>Porfolio</h3>
     </a>
+    <nav class="container">
+        <button routerLink="/">Home</button>
+        <button routerLink="/proyects">Proyects</button>
+        <button routerLink="/contact">Contact</button>
+    </nav>
 
+    <nav id="menu-icon" class="menu-icon" (click)="showMenu()">
+        <i class="fa-solid fa-bars fa-2xl"></i>
+        <ul id="list" [ngStyle]="this.showNow?{'display':'inline-block'}:{'display':'none'}">
+            <li routerLink="/">Home</li>
+            <li routerLink="/proyects"> Proyects</li>
+            <li routerLink="/contact">Contact</li>
+        </ul>
+    </nav>
 </div>

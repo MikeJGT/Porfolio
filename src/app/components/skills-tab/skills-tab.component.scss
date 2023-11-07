@@ -1,0 +1,134 @@
+@import '../.././../styles/mixins';
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    @include flexCenter($direction: column);
+    margin: 10rem 0;
+    gap: 50px;
+}
+
+.container {
+    width: 80%;
+    @include flexCenter();
+}
+
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    @include flexCenter($align: stretch, $wrap: wrap);
+    gap: 20px;
+    cursor: pointer;
+}
+
+.picture {
+    width: 100px;
+    height: 100px;
+}
+
+span {
+    display: block;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.1em;
+        border: 1px solid $primarycolor;
+        border-left: none;
+        opacity: 1;
+        transition: opacity 300ms, transform 300ms;
+        transform: translate3d(-110%, 0, 0);
+
+    }
+}
+
+.logo {
+    width: 100px;
+    @include flexCenter($direction: column);
+    gap: 10px;
+    filter: grayscale(100%);
+
+    &:hover {
+        filter: none;
+    }
+
+    & h3 {
+        margin-bottom: 10px;
+        @include font($color: $textcolor-base, $text-align: center);
+    }
+
+    & .skill-title {
+        min-width: 50%;
+        overflow: hidden;
+    }
+
+    &:hover span::after,
+    &:focus span::after {
+        opacity: 1;
+        transform: translate3d(0, 0.2em, 0);
+    }
+}
+
+
+.bounce {
+    transition: all 0.3s ease;
+
+    &:hover {
+        -webkit-animation: bounce 1s ease;
+        animation: bounce 1s ease;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+    }
+}
+
+@keyframes bounce {
+    15% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+
+    30% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+
+    50% {
+        -webkit-transform: translateY(3px);
+        transform: translateY(3px);
+    }
+
+    65% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+    }
+
+    80% {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@include medium() {
+    .wrapper {
+        margin: 5rem 0;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 1rem;
+    }
+}

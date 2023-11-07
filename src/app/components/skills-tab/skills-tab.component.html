@@ -1,0 +1,17 @@
+<div class="wrapper">
+    <h2>Technologies</h2>
+    <div class="container">
+        <section>
+            <div class="logo" *ngFor="let skill of skills;index as i" data-aos="fade-in">
+                <div class="picture bounce">
+                    <img [src]="skill.image" alt="_blank">
+                </div>
+                <div class="skill-title">
+                    <span>
+                        <h3>{{skill.name}}</h3>
+                    </span>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

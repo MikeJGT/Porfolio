@@ -1,16 +1,20 @@
 import { Component } from '@angular/core';
-//import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import * as AOS from 'aos';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  // title = 'Porfolio';
-  // constructor(private modalService: NgbModal) {
-  // }
 
-  // public open(modal: any): void {
-  //   this.modalService.open(modal);
-  // }
+  ngOnInit() {
+    AOS.init({ duration: 1500 });
+    window.addEventListener('load', AOS.refresh);
+  }
+
+  onActivate() {
+    window.scroll(0, 0);
+  }
+
 }

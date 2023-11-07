@@ -1,0 +1,230 @@
+@import './variables';
+
+
+//////////////////////////////
+//
+//  Common Mixins
+//
+//////////////////////////////
+
+/*
+*Description : Use to center elements with flex.
+*/
+@mixin flexCenter($justify: center, $align: center, $direction: row, $wrap: nowrap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+/*
+*Description: Use this mixin to set the font propeties
+*/
+@mixin font ($color: $textcolor-primary, $font-size: $font-size-text, $font-weight: 400, $font-style: normal, $font-family: $fontfamily-text, $text-align: left) {
+    color: $color;
+    font: $font-style $font-weight $font-size $font-family;
+    text-align: $text-align;
+}
+
+
+
+//////////////////////////////
+//
+//  Media Querys
+//
+//////////////////////////////
+
+/*
+*Description: Small media query.
+*Params ($width) The propety width, may be max-width or min-width.
+*/
+@mixin small($width: max-width) {
+    @media screen and ($width: $breakpoint-s) {
+        @content;
+    }
+}
+
+/*
+*Description: Medium media query.
+*Params ($width) The propety width, may be max-width or min-width.
+*/
+@mixin medium($width: max-width) {
+    @media screen and ($width: $breakpoint-m) {
+        @content;
+    }
+}
+
+/*
+*Description: Large media query.
+*Params ($width) The propety width, may be max-width or min-width.
+*/
+@mixin large($width: max-width) {
+    @media screen and ($width: $breakpoint-lg) {
+        @content;
+    }
+}
+
+
+
+
+//////////////////////////////////////
+///  
+///     Animations
+/// 
+//////////////////////////////////////
+
+/*
+*Description:  Set an animation for make blink texts, looks like a typewriter effect.
+*/
+@mixin blinkText($position: center, $duration: 4s, $count: infinite, $animation: null, $border: null) {
+    border-right: 1px solid transparent;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing $duration steps(38) 1s 1 normal both, blink 1s steps(1) $count, $animation;
+    text-align: $position;
+}
+
+/*
+*Description:  Keyframes for blink Animation.
+*/
+@mixin blinkKeyframes() {
+    @keyframes blink {
+        50% {
+            border-color: white;
+
+        }
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 100%;
+        }
+    }
+}
+
+
+
+/*
+*Description: Fade-in animation, makes an element appear.
+*/
+@mixin hideToView ($duration: 5s, $animation: null) {
+    opacity: 0;
+    -webkit-animation: toView 1s ease;
+    -moz-animation: toView 1s ease;
+    -o-animation: toView 1s ease;
+    animation: toView 1s ease;
+    animation-delay: $duration;
+
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/*
+*Description: Keyframes for hideToView Animation.
+*/
+@mixin KeyframesHideToView() {
+    @keyframes toView {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes toView {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+
+
+/*
+*Description: Make fonts shine like gold.
+*/
+@mixin shine($animation: null, $clip: text) {
+    animation: fluido 5s ease-in-out infinite, $animation;
+    background: repeating-linear-gradient(5deg,
+            #ffb338 0%,
+            #77571d 23%,
+            #ffb338 31%);
+
+    background-size: 300%;
+    -webkit-background-clip: $clip;
+    background-clip: $clip;
+    -webkit-text-fill-color: transparent;
+}
+
+/*
+*Description: Keyframes for shine animation.
+*/
+@mixin shineKeyframes() {
+    @keyframes fluido {
+        0% {
+            background-position: 0 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0 50%
+        }
+    }
+}
+
+
+
+/*
+*Description: This animation focus on make jump dots. Each dot must be implemented on HTML with a .dot class. 
+*/
+@mixin dots($animation: null) {
+    .dot {
+        display: inline-block;
+    }
+
+    //Modify this selectors if needed.
+    .dot:nth-last-child(1) {
+        animation: jumpingAnimation 2.4s 1.2s linear infinite, $animation;
+    }
+
+    .dot:nth-last-child(2) {
+        animation: jumpingAnimation 2.4s 0.6s linear infinite, $animation;
+    }
+
+    .dot:nth-last-child(3) {
+        animation: jumpingAnimation 2.4s 0s linear infinite, $animation;
+    }
+
+    @keyframes jumpingAnimation {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        16% {
+            transform: translate(0, -15px);
+        }
+
+        33% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+}

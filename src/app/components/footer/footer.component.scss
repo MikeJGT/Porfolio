@@ -1,0 +1,14 @@
+@import '../../../styles/mixins';
+
+.wrapper {
+    width: 100%;
+    height: 75px;
+    background-color: $primarycolor;
+    @include flexCenter();
+}
+
+p {
+    @include shine();
+}
+
+@include shineKeyframes();

@@ -1,64 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Arapey&family=Gloock&display=swap');
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-// font-family: 'Arapey', serif;
-// font-family: 'Gloock', serif;
+@import '../../../styles/mixins';
 
 .about {
-    width: 100vw;
-    height: 110vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: wheat;
-    font-family: 'Gloock', serif;
+    width: 100%;
+    height: 100%;
+    @include flexCenter();
+    font-family: $fontfamily-text;
+    // overflow: hidden;
+    margin: 5rem 0;
+    padding: 0 10px;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+    filter: $home-color-filter;
+    z-index: -1;
 }
 
 .container {
-    width: 60%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-}
-
-.title {
+    width: 100%;
+    min-height: 80%;
+    @include flexCenter();
     margin: 50px 0;
+    position: relative;
+
 }
+
+.about-content {
+    width: 70%;
+    @include flexCenter($direction: column);
+    margin: 125px 0;
+    gap: 20px;
+}
+
 
 h2 {
-    font-size: 3rem;
+    color: $textcolor-base;
 }
 
 .descripcion {
     width: 100%;
     height: auto;
-    font-family: 'Arapey', serif;
-    font-size: 1.2rem;
-    // text-align: justify;
-    // text-justify: inter-word;
     text-indent: 1.5rem;
-    margin-bottom: 50px;
+    text-align: center;
+    margin: 25px;
 }
 
-ul {
-    margin: 20px;
-    text-decoration: none;
-}
 
-@media(max-width:480px) {
-    .about {
-        height: auto;
+@include medium() {
+    .title {
+        margin-bottom: 20px;
     }
 
     .container {
-        width: 80%;
+        width: 100%;
+    }
+}
+
+@include small() {
+    .about-content {
+        margin: 175px 0;
+    }
+}
+
+@include large(min-width) {
+    .container {
+        width: 850px;
     }
 }

@@ -1,0 +1,10 @@
+<div class="carrusel-content ">
+    <div class="carrusel-box">
+        <div class="carrusel-item" *ngFor="let image of images[0];index as i">
+            <picture>
+                <source [srcset]="images[1][i]+' 600w'" media="(min-width: 768px)" />
+                <img class="imagenes" [src]="images[0][i]" />
+            </picture>
+        </div>
+    </div>
+</div>

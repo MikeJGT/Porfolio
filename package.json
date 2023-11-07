@@ -19,6 +19,8 @@
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
     "@popperjs/core": "^2.11.6",
+    "@types/aos": "^3.0.6",
+    "aos": "^2.3.4",
     "bootstrap-slider": "^11.0.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
