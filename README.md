@@ -19,7 +19,9 @@ Para usar este proyecto necesitas tener instalado NodeJS y Angular.
 
 Puedes descargar la carpeta comprimida desde la pestaña code o darle a fork si ya tienes una cuenta de github.
 
-Una vez descargado el proyecto abre la carpeta en tu terminal y escribe:
+Modifica las variables de entorno en [environment](https://github.com/MikeJGT/Porfolio/tree/main/src/environments) con la ruta de mi e-mail service, más información en [Porfolio Backend](https://github.com/MikeJGT/PorfolioBackend).
+
+Una vez descargado el proyecto y desplegado el backend, abre la carpeta en tu terminal y escribe:
 
 ```
 npm i 
