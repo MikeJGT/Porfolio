@@ -117,7 +117,7 @@ export const proyectsInfo: Array<Proyects> = [
         <br> <br>
         You can see this project in the following link.
         <br> <br>`,
-        link: 'https://github.com/MikeJGT/ClassMate_express/tree/main/ClassMate/routes'
+        link: 'https://github.com/MikeJGT/ClassMate_front_final'
     },
     {
         id: 6,
